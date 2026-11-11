@@ -1,0 +1,7 @@
+<resources>
+    <color name="bg">#0B1430</color>
+    <color name="sidebar">#0F1B3F</color>
+    <color name="accent">#2F6BFF</color>
+    <color name="text">#FFFFFF</color>
+    <color name="muted">#9FB0D8</color>
+</resources>

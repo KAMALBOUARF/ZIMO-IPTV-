@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="horizontal" android:background="@color/bg">
+
+    <!-- Barre latérale -->
+    <LinearLayout android:id="@+id/sidebar" android:layout_width="150dp" android:layout_height="match_parent"
+        android:orientation="vertical" android:background="@color/sidebar" android:padding="8dp">
+        <TextView android:id="@+id/navHome" style="@style/Nav" android:text="Accueil" android:selected="true"/>
+        <TextView android:id="@+id/navLive" style="@style/Nav" android:text="Direct"/>
+        <TextView android:id="@+id/navMovies" style="@style/Nav" android:text="Films"/>
+        <TextView android:id="@+id/navSeries" style="@style/Nav" android:text="Séries"/>
+        <TextView android:id="@+id/navFav" style="@style/Nav" android:text="Favoris"/>
+        <TextView android:id="@+id/navSettings" style="@style/Nav" android:text="Paramètres"/>
+    </LinearLayout>
+
+    <!-- Contenu -->
+    <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+        android:orientation="vertical" android:padding="12dp">
+
+        <!-- Barre du haut -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+            <TextView android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:text="IPTV PLAYER  ·  Votre expérience IPTV" android:textColor="@color/muted" android:textSize="14sp"/>
+            <TextView android:id="@+id/status" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="@color/muted" android:textSize="12sp" android:layout_marginEnd="16dp"/>
+            <TextClock android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:format24Hour="HH:mm" android:format12Hour="HH:mm" android:textColor="@color/text" android:textSize="18sp"/>
+        </LinearLayout>
+
+        <!-- Bannière -->
+        <TextView android:id="@+id/hero" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1.4"
+            android:layout_marginTop="10dp" android:background="@drawable/hero_bg" android:gravity="center"
+            android:text="IPTV PLAYER\nRegardez sans limites" android:textColor="@color/text" android:textSize="26sp" android:textStyle="bold"/>
+
+        <!-- 3 cartes -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:layout_marginTop="10dp" android:orientation="horizontal">
+            <TextView android:id="@+id/cardLive" style="@style/Card" android:background="@drawable/card_live"
+                android:text="Direct\nChaînes du monde entier"/>
+            <TextView android:id="@+id/cardMovies" style="@style/Card" android:background="@drawable/card_movies"
+                android:text="Films\nFilms illimités"/>
+            <TextView android:id="@+id/cardSeries" style="@style/Card" android:background="@drawable/card_series"
+                android:text="Séries\nSéries internationales"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:text="Chaînes à la une" android:textColor="@color/text" android:textSize="14sp"/>
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="64dp" android:scrollbars="none">
+            <LinearLayout android:id="@+id/featured" android:layout_width="wrap_content" android:layout_height="match_parent"
+                android:orientation="horizontal" android:paddingTop="6dp"/>
+        </HorizontalScrollView>
+    </LinearLayout>
+</LinearLayout>
